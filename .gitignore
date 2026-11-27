@@ -66,3 +66,58 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# ---- ROS / Python / 데이터 ----
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ROS build
+build/
+install/
+log/
+
+# 모델 가중치 / 체크포인트 (레포에 올리지 않음)
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.safetensors
+*.onnx
+*.gguf
+*.bin
+*.engine
+models/
+checkpoints/
+.learning-deps/
+
+# 학습/실행 데이터
+vla_runs/
+runs/
+*.bag
+*.db3
+*.mcap
+*.mp4
+*.zip
+*.tar
+*.tar.gz
+
+# 비밀 / 개인 설정 (와이파이, 토큰, 키, 로봇 IP)
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*secret*
+*token*
+lyrical_env.bash
+fastdds_*.xml
+find_pi.sh
+wpa_supplicant*.conf
+*.nmconnection
+
+# 3D 메시(.obj)는 위 "Compiled Object files" 규칙에 걸리므로 meshes 폴더만 예외
+!**/meshes/**/*.obj
